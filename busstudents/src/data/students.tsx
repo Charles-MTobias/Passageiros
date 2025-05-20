@@ -1,41 +1,49 @@
+export type Passageiro = {
+  aluno: string;
+  sala: number;
+  veio: boolean;
+};
+
 export type Props={
         id:number,
+        checked: boolean,
         linha: string,
-        veio: boolean
         motorista: string,
         placa: string,
-        alunos:string[]
+        passageiro:Passageiro[]
 }
 
 export const Students:Props[] =[
     {
         id:1,
+        checked: false,
         linha: 'Alexandria',
-        veio: false,
         motorista: 'Seu paul',
         placa: '123milhas',
-        alunos:[
-            'julia', 'vanessa', 'camargo'
+        passageiro:[
+            {aluno: 'cleber', sala: 8, veio:false },
+            {aluno: 'javedson', sala: 4, veio:false },
+            {aluno: 'bambam', sala: 1, veio:false },
         ]
     },
     {
         id:1,
+        checked: false,
         linha: 'piquinique',
-        veio: false,
         motorista: 'Seu paul',
         placa: '123milhas',
-        alunos:[
-            'julia', 'vanessa', 'camargo'
+        passageiro:[
+            {aluno: 'cleber', sala: 8, veio:false }
         ]
     },
     {
         id:1,
+        checked: false,
         linha: 'sertao',
-        veio: false,
         motorista: 'Seu paul',
         placa: '123milhas',
-        alunos:[
-            'julia', 'vanessa', 'camargo'
+        passageiro:[
+            {aluno: 'cleber', sala: 8, veio:false }
         ]
     },
 ]
