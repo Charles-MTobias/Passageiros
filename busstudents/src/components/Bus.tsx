@@ -10,7 +10,7 @@ type idBoolean= {id: number; checked: boolean;}
 
 export const Bus=({e}: Students )=>{
     const [secret, setSecret] = useState<idBoolean[]>([]);
-    const [handlebtn, setHandleBtn] = useState<Passageiro[]>([])
+    const [dados, setDados] = useState<Props[]>(e);
 
 
     function toggleItem(id: number) {
@@ -23,15 +23,19 @@ export const Bus=({e}: Students )=>{
         );
     }
 
-    function active(id: number){
-         let newHandleBtn = [...handlebtn];
-         newHandleBtn[id].veio = !newHandleBtn[id].veio
+    function active(id: number) {
+  const novosDados = dados.map(item => ({
+    ...item,
+    passageiro: item.passageiro?.map(p =>
+      p.id === id ? { ...p, veio: !p.veio } : p
+    )
+  }));
 
-    setHandleBtn(newHandleBtn);
-    }
+  setDados(novosDados);
+}
     return (
         <div>
-            {e.map(item => (
+            {dados.map(item => (
                 <div key={item.id} style={{ marginBottom: '1rem' }}>
                     <button
                         className='btn btn-dark w-100'
@@ -52,8 +56,8 @@ export const Bus=({e}: Students )=>{
                             </thead>
                             <tbody>
                                 {item.passageiro?.map((passageiro: Passageiro, idx: number) => (
-                                    <tr key={idx} className='bg-white'>
-                                        <td className='p-3'>{passageiro.aluno}</td>
+                                    <tr key={idx} className='bg-white border-bottom border-dark '>
+                                        <td className='p-3 fw-bold'>{passageiro.aluno}</td>
                                         <td>
                                             
                                             <div key={passageiro.id} onClick={() => active(passageiro.id)}>

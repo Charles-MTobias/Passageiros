@@ -19,7 +19,7 @@ export const Students:Props[] =[
         id:1,
         checked: false,
         linha: 'Alexandria',
-        motorista: 'Seu paul',
+        motorista: 'Seu Jorge',
         placa: '123milhas',
         passageiro:[
             {aluno: 'cleber', sala: 8, veio:false, id:1},
@@ -31,7 +31,7 @@ export const Students:Props[] =[
         id:2,
         checked: false,
         linha: 'piquinique',
-        motorista: 'Seu paul',
+        motorista: 'Seu Jorge',
         placa: '123milhas',
         passageiro:[
             {aluno: 'cleber', sala: 8, veio:false, id:1},
@@ -43,7 +43,7 @@ export const Students:Props[] =[
         id:3,
         checked: false,
         linha: 'sertao',
-        motorista: 'Seu paul',
+        motorista: 'Seu Jorge',
         placa: '123milhas',
         passageiro:[
             {aluno: 'cleber', sala: 8, veio:false, id:1},
