@@ -27,7 +27,7 @@ export const Students:Props[] =[
         ]
     },
     {
-        id:1,
+        id:2,
         checked: false,
         linha: 'piquinique',
         motorista: 'Seu paul',
@@ -37,7 +37,7 @@ export const Students:Props[] =[
         ]
     },
     {
-        id:1,
+        id:3,
         checked: false,
         linha: 'sertao',
         motorista: 'Seu paul',

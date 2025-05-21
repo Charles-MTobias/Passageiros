@@ -9,7 +9,7 @@ export const Page= ()=>{
 
 
   return(
-    <div className='page'>
+    <div className='page container'>
       <Bus e={Students}/>
     </div>
   )
