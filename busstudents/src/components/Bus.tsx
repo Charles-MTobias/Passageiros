@@ -5,10 +5,13 @@ type Students= {
     e: Props[]
 }
 
+type idBoolean= {id: number; checked: boolean;}
+
 
 export const Bus=({e}: Students )=>{
-    const [secret, setSecret] = useState<{ id: number; checked: boolean }[]>([]);
-    const [handlebtn, setHandleBtn] = useState(false)
+    const [secret, setSecret] = useState<idBoolean[]>([]);
+    const [handlebtn, setHandleBtn] = useState<Passageiro[]>([])
+
 
     function toggleItem(id: number) {
         setSecret(prev =>
@@ -20,8 +23,11 @@ export const Bus=({e}: Students )=>{
         );
     }
 
-    function active(){
-        setHandleBtn(!handlebtn)
+    function active(id: number){
+         let newHandleBtn = [...handlebtn];
+         newHandleBtn[id].veio = !newHandleBtn[id].veio
+
+    setHandleBtn(newHandleBtn);
     }
     return (
         <div>
@@ -49,11 +55,11 @@ export const Bus=({e}: Students )=>{
                                     <tr key={idx} className='bg-white'>
                                         <td className='p-3'>{passageiro.aluno}</td>
                                         <td>
-                                            <button onClick={ () => active()}>
-                                                {/* {passageiro.veio ? 'veio' : 'não veio'} */}
-                                                {passageiro.veio && <div className='btn btn-success'>Active</div>}
-                                                {!passageiro.veio && <div className='btn btn-danger'>inactive</div>}
-                                            </button>
+                                            
+                                            <div key={passageiro.id} onClick={() => active(passageiro.id)}>
+                                                {passageiro.veio && <button className='btn btn-success'>Active</button>}
+                                                {!passageiro.veio && <button className='btn btn-danger'>inactive</button>}
+                                            </div>
                                             
                                         </td>
                                         <td className='p-3'>{passageiro.sala}</td>

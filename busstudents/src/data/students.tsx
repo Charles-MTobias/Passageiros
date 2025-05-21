@@ -2,6 +2,7 @@ export type Passageiro = {
   aluno: string;
   sala: number;
   veio: boolean;
+  id: number
 };
 
 export type Props={
@@ -21,9 +22,9 @@ export const Students:Props[] =[
         motorista: 'Seu paul',
         placa: '123milhas',
         passageiro:[
-            {aluno: 'cleber', sala: 8, veio:false },
-            {aluno: 'javedson', sala: 4, veio:false },
-            {aluno: 'bambam', sala: 1, veio:false },
+            {aluno: 'cleber', sala: 8, veio:false, id:1},
+            {aluno: 'javedson', sala: 4, veio:false, id:2 },
+            {aluno: 'bambam', sala: 1, veio:false, id:3 },
         ]
     },
     {
@@ -33,7 +34,9 @@ export const Students:Props[] =[
         motorista: 'Seu paul',
         placa: '123milhas',
         passageiro:[
-            {aluno: 'cleber', sala: 8, veio:false }
+            {aluno: 'cleber', sala: 8, veio:false, id:1},
+            {aluno: 'javedson', sala: 4, veio:false, id:2 },
+            {aluno: 'bambam', sala: 1, veio:false, id:3 },
         ]
     },
     {
@@ -43,7 +46,9 @@ export const Students:Props[] =[
         motorista: 'Seu paul',
         placa: '123milhas',
         passageiro:[
-            {aluno: 'cleber', sala: 8, veio:false }
+            {aluno: 'cleber', sala: 8, veio:false, id:1},
+            {aluno: 'javedson', sala: 4, veio:false, id:2 },
+            {aluno: 'bambam', sala: 1, veio:false, id:3 },
         ]
     },
 ]
