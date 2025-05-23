@@ -25,15 +25,21 @@ export const Students:Props[] =[
             {aluno: 'Eduarda', sala: 4, veio:false, id:1},
             {aluno: 'Helena', sala: 7, veio:false, id:2 },
             {aluno: 'Jasmin Olmido', sala: 7, veio:false, id:3 },
+            {aluno: 'Eduarda', sala: 4, veio:false, id:1},
+            {aluno: 'Helena', sala: 7, veio:false, id:2 },
+            {aluno: 'Jasmin Olmido', sala: 7, veio:false, id:3 },
         ]
     },
     {
         id:2,
         checked: false,
         linha: 'Novo Horizonte',
+        linha: 'Novo Horizonte',
         motorista: 'Seu Jorge',
         placa: '123milhas',
         passageiro:[
+            {aluno: 'Valdwelmisson', sala: 9, veio:false, id:1},
+            {aluno: 'Davi', sala: 7, veio:false, id:2 },
             {aluno: 'Valdwelmisson', sala: 9, veio:false, id:1},
             {aluno: 'Davi', sala: 7, veio:false, id:2 },
         ]
@@ -201,6 +207,8 @@ export const Students:Props[] =[
         motorista: 'Seu Jorge',
         placa: '123milhas',
         passageiro:[
+            {aluno: 'Nicole', sala: 9, veio:false, id:1},
+            {aluno: 'João  Miguel', sala: 6, veio:false, id:2 },
             {aluno: 'Nicole', sala: 9, veio:false, id:1},
             {aluno: 'João  Miguel', sala: 6, veio:false, id:2 },
         ]
