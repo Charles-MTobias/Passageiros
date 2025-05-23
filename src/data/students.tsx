@@ -34,7 +34,6 @@ export const Students:Props[] =[
         id:2,
         checked: false,
         linha: 'Novo Horizonte',
-        linha: 'Novo Horizonte',
         motorista: 'Seu Jorge',
         placa: '123milhas',
         passageiro:[
