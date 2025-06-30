@@ -1,4 +1,5 @@
-import {useState} from 'react'
+
+import {useEffect, useState} from 'react'
 import {Props, Passageiro} from "@/data/students"
 
 type Students= {
@@ -11,6 +12,26 @@ type idBoolean= {id: number; checked: boolean;}
 export const Bus=({e}: Students )=>{
     const [secret, setSecret] = useState<idBoolean[]>([]);
     const [dados, setDados] = useState<Props[]>(e);
+
+    useEffect(() => {
+    setDados(e);
+    }, [e]);
+
+
+    useEffect(() => {
+  const storedSecret = localStorage.getItem('toggleState');
+  if (storedSecret) {
+    setSecret(JSON.parse(storedSecret));
+  }
+}, []);
+
+    
+useEffect(() => {
+  if (secret.length > 0) {
+    localStorage.setItem('toggleState', JSON.stringify(secret));
+  }
+}, [secret]);
+
 
 
     function toggleItem(id: number) {
